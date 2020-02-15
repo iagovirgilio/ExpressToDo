@@ -1,6 +1,6 @@
 {
   "name": "ExpressToDo",
-  "version": "1.0.0",
+  "version": "1.0",
   "main": "index.js",
   "repository": "https://github.com/iagovirgilio/ExpressToDo.git",
   "author": "Iago Virgílio <iagojm@hotmail.com>",
