@@ -5,6 +5,9 @@
   "repository": "https://github.com/iagovirgilio/ExpressToDo.git",
   "author": "Iago Virgílio <iagojm@hotmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
   "dependencies": {
     "express": "^4.17.1"
   },
