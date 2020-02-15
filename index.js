@@ -23,4 +23,15 @@ server.get('/projects', (req, res) => {
   return res.json(projects);
 });
 
+server.put('/projects/:id', (req, res) => {
+  const { id } = req.params;
+  const { title } = req.body;
+
+  const project = projects.find(p => p.id == id);
+
+  project.title = title;
+
+  return res.json(project);
+});
+
 server.listen(port, () => console.log(`Serviço rodando na porta ${port}`));
