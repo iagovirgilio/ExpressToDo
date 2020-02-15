@@ -44,4 +44,15 @@ server.delete('/projects/:id', (req, res) => {
   return res.send();
 })
 
+server.post('/projects/:id/tasks', (req, res) => {
+  const { id } = req.params;
+  const { title } = req.body;
+
+  const projectTask = projects.find(p => p.id == id);
+
+  projectTask.tasks.push(title);
+
+  return res.json(projectTask);
+})
+
 server.listen(port, () => console.log(`Serviço rodando na porta ${port}`));
