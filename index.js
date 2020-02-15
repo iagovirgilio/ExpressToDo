@@ -4,17 +4,9 @@ const port = 3000;
 
 server.use(express.json());
 
-const projects = [
-  {
-    id: "1",
-    title: 'Novo projeto',
-    tasks: [
-      'Tarefa 01',
-    ]
-  }
-];
+const projects = [];
 
-server.post('projects/', (req, res) => {
+server.post('/projects', (req, res) => {
   const { id, title } = req.body;
 
   const project = {
