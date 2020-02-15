@@ -34,4 +34,14 @@ server.put('/projects/:id', (req, res) => {
   return res.json(project);
 });
 
+server.delete('/projects/:id', (req, res) => {
+  const { id } = req.params;
+
+  const projectIndex = projects.find(p => p.id == id);
+
+  projects.splice(projectIndex, 1);
+
+  return res.send();
+})
+
 server.listen(port, () => console.log(`Serviço rodando na porta ${port}`));
